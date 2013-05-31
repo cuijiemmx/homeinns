@@ -1,0 +1,174 @@
+<krpano version="1.16" title="Virtual Tour" onstart="startup();">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+	<skin_settings bingmaps="false"
+	               bingmaps_key=""
+	               bingmaps_zoombuttons="false"
+	               gyro="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               controlbar_offset="20"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+
+
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[0].name));
+		loadscene(get(startscene), null, MERGE);
+	</action>
+
+	
+	<scene name="scene_000_business" title="000_business" onstart="" thumburl="panos/000_business.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/000_business.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/000_business.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/000_business.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+	</scene>
+
+	<scene name="scene_001_business_old" title="001_business_old" onstart="" thumburl="panos/001_business_old.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/001_business_old.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/001_business_old.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/001_business_old.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+	</scene>
+
+	<scene name="scene_002_lobby" title="002_lobby" onstart="" thumburl="panos/002_lobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/002_lobby.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/002_lobby.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/002_lobby.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.420" atv="4.447" linkedscene="scene_003_outdoor" />
+
+	</scene>
+
+	<scene name="scene_003_outdoor" title="003_outdoor" onstart="" thumburl="panos/003_outdoor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/003_outdoor.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/003_outdoor.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/003_outdoor.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="9.223" atv="1.530" linkedscene="scene_002_lobby" />
+
+	</scene>
+
+	<scene name="scene_004_restaurant" title="004_restaurant" onstart="" thumburl="panos/004_restaurant.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/004_restaurant.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/004_restaurant.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/004_restaurant.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+	</scene>
+
+	<scene name="scene_005_standard-bathroom" title="005_standard-bathroom" onstart="" thumburl="panos/005_standard-bathroom.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/005_standard-bathroom.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/005_standard-bathroom.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/005_standard-bathroom.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-53.222" atv="25.086" linkedscene="scene_006_standard-bedroom" />
+
+	</scene>
+
+	<scene name="scene_006_standard-bedroom" title="006_standard-bedroom" onstart="" thumburl="panos/006_standard-bedroom.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/006_standard-bedroom.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/006_standard-bedroom.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/006_standard-bedroom.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-99.245" atv="7.715" linkedscene="scene_005_standard-bathroom" />
+
+	</scene>
+
+	<scene name="scene_007_standard-old" title="007_standard-old" onstart="" thumburl="panos/007_standard-old.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/007_standard-old.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/007_standard-old.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/007_standard-old.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+	</scene>
+
+
+</krpano>
