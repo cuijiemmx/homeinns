@@ -6,5 +6,5 @@ account = 'eng'
 #path = '/var/www/html'
 path = '/home/eng'
 src = 'homeinns'
-command = "rsync #{ARGV} -k -rvz --delete --delete-excluded --exclude '.*' 'Icon?' #{src} #{account}@#{address}:#{path}"
+command = "rsync #{ARGV} -k -rvz --delete --delete-excluded --exclude '.*' #{src} #{account}@#{address}:#{path}"
 puts `#{command}`
