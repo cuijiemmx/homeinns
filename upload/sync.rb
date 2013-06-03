@@ -1,8 +1,10 @@
 #! /usr/bin/env ruby
 
-address = 'eng.corp.sifang.com'
-account = 'www-data'
-path = '/var/www/html'
+address = '192.168.1.99'
+#account = 'www-data'
+account = 'eng'
+#path = '/var/www/html'
+path = '/home/eng'
 src = 'homeinns'
-command = "rsync #{ARGV} -k -rvz --delete #{src} #{account}@#{address}:#{path}"
+command = "rsync #{ARGV} -k -rvz --delete --delete-excluded --exclude '.*' 'Icon?' #{src} #{account}@#{address}:#{path}"
 puts `#{command}`
