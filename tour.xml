@@ -66,7 +66,7 @@
 
 	<scene name="scene_002_lobby" title="002_lobby" onstart="" thumburl="panos/002_lobby.tiles/thumb.jpg" lat="" lng="" heading="">
 
-		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-161.853" vlookat="7.496" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/002_lobby.tiles/preview.jpg" />
 
@@ -78,7 +78,7 @@
 		</image>
 
 		<!-- place your scene hotspots here -->
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.420" atv="4.447" linkedscene="scene_003_outdoor" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-95.466" atv="8.846" linkedscene="scene_003_outdoor" />
 
 	</scene>
 
